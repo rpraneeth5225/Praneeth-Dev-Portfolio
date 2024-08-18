@@ -129,7 +129,7 @@ setInterval(updateDateTime, 1000);
                         <div class="project-box">
                             <div class="project-box__link">
                             <a href="https://github.com/rpraneeth5225/Praneeth-Dev-Portfolio" target="_blank" rel="noopener noreferrer"><img src={github2} class="github-black-logo" alt="GitHub Black"></img></a>
-                                <a href="https://safarika.netlify.app" target="_blank" rel="noopener noreferrer"><img src={linklogo} class="logo-link" alt="Link-Logo"></img></a>
+                                <a href="https://praneeth-dev-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer"><img src={linklogo} class="logo-link" alt="Link-Logo"></img></a>
                             </div>
                             <div class="project-box__content">
                                 <h3 class="heading-3">Personal <br/> Portfolio.</h3>
