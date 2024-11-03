@@ -4,22 +4,21 @@ import github from './github.png'
 import github2 from './github-mark.png'
 import linklogo from './link-logo.png'
 import resume from './resume.png'
+import { Skills } from './Skills';
 import resumefile from './Praneeth_Resume_USA.pdf'
+import { useState, useEffect } from 'react'
+
+
 import './index.css';
 import './App.css';
 
 function App() {
-  
-  function updateDateTime() {
-    const now = new Date();
-    const formattedDateTime = now.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    document.getElementById('datetime').innerText = `Last login: ${formattedDateTime}`;
-}
 
-setInterval(updateDateTime, 1000);  
 
   return (
     <div className="App">
+    
+      
       <div className="header">
         <div className="nav">
           <div className="home"><a href="portfolio.html">H O M E</a></div>
@@ -62,55 +61,24 @@ setInterval(updateDateTime, 1000);
           
          
         </section>
-        <a href="#about-me">
+        <a href="#about-me" class>
             <div className="scroll-down"></div>
           </a>
       </div>
 
-        <section className="about-me" id="about-me">
-          <div className="title-bar">
-            <div className="mac-buttons">
-              <a href="portfolio.html"><button className="close"></button></a>
-              <button className="minimize" id="minimize"></button>
-              <button className="maximize"></button>
-            </div>
-            <span className="title"></span>
-          </div>
-          <div className="content">
-            <div id="terminal" className="terminal">
-              <p id="datetime" className="datetime"></p>
-            </div>
-            <div className="input-statement"> &gt; Praneeth.currentLocation <br /></div>
-            <div className="output">"Jersey City, NJ";</div>
-            <br />
-            <div className="input-statement">&gt; Praneeth.mail <br /></div>
-            <div className="output">
-              <a href="mailto: praneethregonda28@gmail.com">"praneethregonda28@gmail.com"</a>
-            </div>
-            <br />
-            <div className="input-statement"> &gt; Praneeth.social <br /></div>
-            <div className="output">
-              [<a href="https://twitter.com/PraneethSays">"&nbsp;Twitter&nbsp;"</a>&nbsp;,
-              <a href="https://www.linkedin.com/in/praneeth-regonda/">"&nbsp;LinkedIn&nbsp;"</a>&nbsp;,
-              <a href="https://github.com/rpraneeth5225">"&nbsp;GitHub&nbsp;"</a>];
-            </div>
-            <br />
-            <div className="input-statement"> &gt; Praneeth.interests <br /></div>
-            <div className="output">
-              ["&nbsp;Web Development&nbsp;",&nbsp; "&nbsp;Formula-1&nbsp;",&nbsp; "&nbsp;E-Commerce&nbsp;"];
-            </div>
-            <br />
-            <div className="input-statement"> &gt; Praneeth.education <br /></div>
-            <div className="output">
-              "Master's in Information Systems - Pace University,&nbsp; New York"
-            </div>
-            <br />
-            <div className="input-statement"> &gt; Praneeth.skills <br /></div>
-            <div className="output">
-              ["&nbsp;JavaScript&nbsp;",&nbsp; "&nbsp;React&nbsp;",&nbsp; "&nbsp;npm&nbsp;",&nbsp; "&nbsp;git&nbsp;",&nbsp; "&nbsp;HTML5&nbsp;",&nbsp; "&nbsp;CSS3&nbsp;"];
-            </div>
-          </div>
+      <section className="about-me" id="about-me">
+
+        <div class="about-me-text">
+        <h4>I love coding</h4>
+        <h4>I use my passion and skills to build digital products and experiences</h4>
+        <h4>I'm passionate building highly performant websites. </h4>
+        
+        </div>
+
+        <section div="tech-stack">
+        <Skills />
         </section>
+      </section>
 
         <section id="projects" class="project">
                     <h5 class="featured-projects">F E A T U R E D  &nbsp; P R O J E C T S   -</h5>
@@ -169,6 +137,7 @@ setInterval(updateDateTime, 1000);
                 </section>
                 <section id="contact" class="contact">
                     <h5 class="heading-contact">C O N T A C T &mdash;</h5>
+                    <div class="email-phone">
                     <div id="email-contact">
                       <h3 class="email-contact">E M A I L 📧 &nbsp; &mdash;</h3>
                     <a class="email-address" href="mailto:praneethregonda28@gmail.com" target="_blank" rel="nofollow noopener noreferrer">praneethregonda28@gmail.com</a>
@@ -178,6 +147,8 @@ setInterval(updateDateTime, 1000);
                     <h3 class="phone-contact">P H O N E 📞&nbsp; &mdash;</h3>
                     <a class="phone-number" href="tel: 551-229-8332" target="_blank" rel="nofollow noopener noreferrer">+1 (551)-229-8332</a>
                     </div>
+                    </div>
+                    
                 </section>
 
                 <footer class="footer" id="footer">
@@ -188,3 +159,5 @@ setInterval(updateDateTime, 1000);
 }
 
 export default App;
+
+
