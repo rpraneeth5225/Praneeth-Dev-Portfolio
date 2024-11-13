@@ -1,34 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=IBM+Plex+Mono&display=swap");
+
+
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Calibre-Regular';
-  /* font-family: 'Geist-Light', sans-serif; */
   font-size: small;
   background-color: black;
-  /* color: white; */
   max-width: 100%;
   overflow-x: hidden;
   
 }
 
-* {
+:root {
+  --color-background:rgb(60, 66, 55);
+  --color-foreground: rgb(230, 225, 215);
+  --color-accent: rgb(200, 180, 160);
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "IBM Plex Mono", monospace;
+  --margin: 32px;
+  --gutter: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 code {
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace; */
     font-family: 'Calibre-Regular';
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background:  rgb(60, 66, 55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
 
+.progress-container {
+  width: 300px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background:  rgb(60, 66, 55);
+}
+
+.percentage {
+  position: fixed;
+  bottom: var(--margin);
+  right: var(--margin);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 25rem;
+  line-height: 0.8;
+  color: var(--color-foreground);
+  opacity: 0.1;
+}
+
+.text-container {
+  height: 3em;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  width: 200px;
+}
+
+.loading-text {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  color: var(--color-foreground);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.loading-text.initial {
+  transform: translateY(0);
+}
+
+.loading-text.complete {
+  transform: translateY(100%);
+}
+
+.loading-text .char {
+  display: inline-block;
+}
+
+.preloader-item {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 body, html {
   background-color: black; 
@@ -69,6 +155,12 @@ body, html {
   height: 30px;
 }
 
+@media (max-width: 600px) {
+  .social-links img {
+      width: 5vw; 
+  }
+}
+
 .social-links img:hover {
   transform: scale(1.2);
   opacity: 0.5;
@@ -103,9 +195,7 @@ font-weight: bold;
   border-radius: 10rem;
   text-transform: uppercase;
   font-size: 12px;
-  /* font-size: large; */
   font-weight: bold;
-  /* font-family: $secondary-font; */
   letter-spacing: 3px;
   border: 1.5px solid transparent;
   cursor: pointer;
@@ -135,6 +225,10 @@ font-weight: bold;
 
 .about-me h4{
   transition: color .2s ease-in-out;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  text-align: center; 
 }
 
 .about-me h4:hover{
@@ -149,8 +243,7 @@ font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70vh; /* Full viewport height */
-  /* padding: 0 20px; Optional: Add padding to the sides */
+  height: 70vh;
   color: white;
   margin-bottom: 200px;
 }
@@ -283,13 +376,6 @@ font-weight: bold;
   border-radius: 20px 20px 0 0;
 }
 
-
-.content {
-  padding: 20px;
-  font-size: medium;
-  text-align: left;
-  margin-left: 8px;
-}
 
 
 .featured-projects{
@@ -600,5 +686,7 @@ skills-title-container {
     transform: scale(1.2);
     opacity: 0.5;
   }
+
+  
 
 
