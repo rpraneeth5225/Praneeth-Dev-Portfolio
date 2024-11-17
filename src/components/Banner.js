@@ -13,7 +13,7 @@ export const Banner = () => {
             <h3 className="dev-2">
               I'm a front end developer based in New Jersey, USA.
             </h3>
-            <a href="#footer"><button class="hire-me">hire me</button></a>
+            <a href="#footer"><button className="hire-me">hire me</button></a>
           </section>
         </>
     )

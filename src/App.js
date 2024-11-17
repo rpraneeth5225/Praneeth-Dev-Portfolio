@@ -5,7 +5,7 @@ import { LoadingAnimation } from './components/LoadingAnimation';
 import { Header } from './components/Header';
 import { Banner } from './components/Banner';
 import { AboutMe } from './components/AboutMe';
-import { Skills } from './components/Skills';
+import { Skills } from './Skills';
 import { Projects } from './components/Projects';
 import {Contact} from './components/Contact';
 import { Footer} from './components/Footer';
@@ -151,14 +151,14 @@ const completeText = new SplitType(".loading-text.complete", { types: "chars" })
           </section>
         </section>
 
-        <section id="projects" class="project">
+        <section id="projects" className="project">
           < Projects/>
         </section>
-        <section id="contact" class="contact">
+        <section id="contact" className="contact">
            < Contact/>
         </section>
 
-        <footer class="footer" id="footer">
+        <footer className="footer" id="footer">
           <Footer/>
         </footer>
       </div>
