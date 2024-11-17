@@ -49,6 +49,10 @@ code {
   z-index: 1000;
 }
 
+.content {
+  visibility: hidden; /* Ensure it's initially hidden */
+}
+
 .progress-container {
   width: 300px;
   height: 2px;
